@@ -1,0 +1,88 @@
+.\" Written by Jonathan McDowell.
+.\" Based on tags.1 from HuggieTag.
+.\"
+.TH SEATRIS 6 "September, 5 1999" Seatris Seatris
+.SH NAME
+seatris \- an ncurses version of Tetris
+.SH SYNOPSIS
+.BR seatris " [" -l 
+.IR level "]"
+.RB "[" -k 
+.IR abcdefgh "]"
+.RB "[" -f
+.IR scorefile "]"
+.RB "[" -b "] [" -c "]"
+
+.BR seatris " " -s " [" -f 
+.IR scorefile ]
+
+.SH DESCRIPTION
+.B seatris
+is a Tetris clone. Simple as that. Written as it's one of my
+favourite games and I've been meaning to write it for ten years now.
+Slightly helped by the fact that the previous Linux Tetris game I'd been
+playing (tt) didn't compile under glibc.
+
+.SH OPTIONS
+.TP
+.B "-b"
+Force mono mode even if seatris detects that the display handles colour.
+.TP
+.B "-c"
+Force colour mode even if seatris detects that the display doesn't handle
+colour.
+.TP
+.BI "-f " scorefile
+Uses
+.I scorefile
+for storing/retrieving the high score table instead of
+.I /var/lib/games/seatris.score
+.br
+.TP
+.BI "-l " level
+Start 
+.B seatris
+at level
+.I level
+instead of level 0. Note that the maximum start level is level 20.
+.TP
+.BI -s
+Display the high score table.
+.TP
+.BI "-k " abcdefgh
+Use key
+.I a
+as left,
+.I b 
+as right,
+.I c 
+as rotate,
+.I d 
+as drop,
+.I e 
+as drop by one line,
+.I f 
+as increase level,
+.I g 
+as pause and
+.I h 
+as quit.
+Default is "jlk m+pq"
+
+
+
+.SH "SEE ALSO"
+The README file. (which might possibly contain some useful documentation)
+
+.SH BUGS
+.B seatris
+is written by someone who should know better. The author takes no
+responsiblity for the hours of productivity that may be lost by playing
+this game. If you suspect you may be a Tetris addict it is recommended
+that you delete this game and forget you ever found it.
+
+.SH AUTHOR
+Jonathan McDowell <noodles@earth.li>
+
+.SH URL
+http://www.earth.li/projectpurple/progs/seatris.html

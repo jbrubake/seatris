@@ -1,0 +1,33 @@
+# Makefile for seatris
+
+CC = @CC@
+CFLAGS = -Wall @CFLAGS@ -pedantic @DEFS@ @CPPFLAGS@
+LFLAGS = -g
+LIBS = @LIBS@
+DEFINES = @DEFS@
+PREFIX = @prefix@
+INSTALLDIR = $(PREFIX)/games
+OBJS = seatris.o blockstuff.o disp_ncurses.o fieldstuff.o scoring.o \
+	parse.o readcfg.o
+
+seatris: $(OBJS)
+	$(CC) $(LFLAGS) $(LIBS) -o seatris $(OBJS)
+
+clean:
+	rm -f *.o seatris
+
+distclean:
+	rm -f *.o seatris config.log config.status config.cache autoconf.h
+
+install: seatris
+	install -o root -g games -m 2711 seatris $(INSTALLDIR)
+	touch /var/lib/games/seatris.score
+	chown root.games /var/lib/games/seatris.score
+	chmod 664 /var/lib/games/seatris.score
+	install -o root -g root -m 644 seatris.6 $(PREFIX)/man/man6
+
+install-rpm: seatris
+	cp seatris $(RPM_BUILD_ROOT)/$(INSTALLDIR)
+	touch $(RPM_BUILD_ROOT)/var/lib/games/seatris.score
+	chmod 664 $(RPM_BUILD_ROOT)/var/lib/games/seatris.score
+	cp seatris.6 $(RPM_BUILD_ROOT)/usr/man/man6

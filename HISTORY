@@ -1,0 +1,103 @@
+0.0.1 - 6th May 1999
+
+Internal Project Purple release.
+
+0.0.2 - 7th May 1999
+
+Internal Project Purple release.
+
+* Added levels.
+* Added pause key.
+* Modified method for getting key presses for smoother game play.
+
+0.0.3 - 10th May 1999
+
+* Fixed bug with blocks being stuck at top right hand corner.
+* Seeded srand with time(NULL).
+* Added Ctrl-L to refresh screen.
+* Added scoring finally.
+* Added quit key.
+
+0.0.4 - 11th May 1999
+
+* Changed return type of main to int. Oops. Thanks to David Sheldon for
+  pointing that one out.
+* Fixed to compile with -pedantic
+* Fixed bug with add_block_to_field().
+* Added version display on screen.
+* Altered scoring for lines to bear some relevance to level.
+
+0.0.5 - 21st May 1999
+
+* Added next block display.
+* Added increase level key.
+* Modified display code to allow scaling easily.
+* Changed speedup per level so it was harder.
+
+0.0.6 - 21st May 1999
+
+* Fixed next block so it actually did show the next block rathar that
+  the current one. Oooops. Thanks to Tim Bagot. No thanks to David Ball
+  or Tristam Fenton-May who failed to notice.
+
+0.0.7 - 24th May 1999
+
+* Added automatic scaling based on the size of the screen.
+* Tried to improve the ease of alignment in the playing field.
+* Added a 'down' key that drops the current block by one line.
+* Fixed the scoring for making lines.
+* Altered the key reading code in preparation for configuration option.
+
+0.0.8 - 24th May 1999
+
+* Changed border round playfield in disp_ncurses.c so it works properly
+  on a 24 line xterm.
+* Added high score table.
+* Added user configuration of keys.
+* Added command line option to choose starting level.
+
+0.0.9 - 11th June 1999
+
+* Added #include <stdio.h> to top of tetris.c
+* Limited start level to max of 20.
+* Added block statistics display.
+
+0.0.10 - 3rd July 1999
+
+* Added date to score file. (Patch from Simon Huggins)
+* Fixed scoring bug where score would always get written to end.
+  (Simon Huggins)
+* Added "Play again?" message when game ends.
+* Wrote rpm spec file.
+* Added install and install-rpm options to makefile.
+
+0.0.11 - 28th July 1999
+
+* Added David Ball's option to specify high score file from the command
+  line.
+* Changed use of select with the aim of increasing portablity.
+* Enabled ^L while game is paused and in "Play Again" screen.
+* Started changing to use GNU autoconf.
+
+0.0.12 - 10th September 1999
+
+* Sorted out more of the autoconf stuff (stole shamelessly from Lynx)
+* Tried to make it a bit slower - change of select usage seems to have
+  speeded the game up.
+* Wrote man page.
+* Added sensing of colour/mono capabilities and option to force mono.
+
+0.0.13 - 24th September 1999
+
+* Fixed scorefilef things to use extern properly.
+* Added config file for keys/level/highscore file/mono.
+* Integrated Eric Nadeau's UI style changes.
+
+0.0.14
+
+* Invalid commandline options are reported (huggie).
+* Added help option (huggie).
+* Fixed scorefile stuff so if it can't be saved an error is reported.
+* Changed name to seatris.
+* Added lefthand wall patch. (David Ball)
+

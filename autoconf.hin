@@ -1,0 +1,32 @@
+/*
+	autoconf.hin - GNU autoconf defines.
+	Used to create autoconf.h
+	Copyright 1999 Jonathan McDowell for Project Purple
+
+	05/09/1999 - Started.
+*/
+
+#ifndef __AUTOCONF_H_
+#define __AUTOCONF_H_
+
+#undef COLOUR_CURSES		/* defined by CF_COLOR_CURSES */
+#undef FANCY_CURSES		/* defined by CF_FANCY_CURSES */
+#undef HAVE_CURSESX_H
+#undef HAVE_JCURSES_H
+#undef HAVE_NCURSES_H		/* defined if we include <ncurses.h> */
+
+#undef HAVE_USE_DEFAULT_COLORS	/* ncurses extension */
+
+#undef NCURSES			/* defined for ncurses support */
+#undef NCURSES_BROKEN		/* defined for ncurses color support */
+
+#undef STDC_HEADERS
+#undef HAVE_STDLIB_H
+#undef HAVE_SYS_TIME_H
+#undef HAVE_GETOPT_H
+#undef TIME_WITH_SYS_TIME
+#undef HAVE_SELECT
+#undef HAVE_STRDUP
+#undef HAVE_UNISTD_H		/* have <unistd.h> */
+
+#endif

@@ -1,0 +1,18 @@
+# Example seatrisrc file.
+LEVEL 12
+SCOREFILE ../seatris.score
+
+# KEYS abcdefgh
+# a=left, b=right, c=rotate, d=drop to bottom
+# e=drop one line, f=inc level, g=pause, h=quit
+# Default is "KEYS jlk m+pq"
+# Vi keys from Eric Nadeau <nado@ottawa.com>:
+# KEYS hlk j+pq
+# Other examples:
+# KEYS 687 m+pq
+
+# MONO <true|false> for forcing no colour mode.
+# BOLD <true|false> to enable/disable bold colours.
+# DOTS <true|false> to enable/disable dots for guiding blocks.
+# SQUIGGLES <true|false> to enable/disable '$' for guiding blocks.
+# (yes, I know they're dollar signs, IJLS 'squiggles')

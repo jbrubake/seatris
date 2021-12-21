@@ -1,0 +1,21 @@
+David Ball		Helped work out the pre coding details. Probably
+<db@earth.li>		responsible for me bothering to write tetris at all,
+			even if he tries to claim otherwise. Also submitted
+			several patches for options I would never have thought
+			of.
+
+Simon Huggins		Tested stuff, complained and provided some features
+<huggie@earth.li>	and bug fixes.
+
+Toby Jaffey		Tested stuff and fed me tequila.
+<toby@earth.li>
+
+Tim Bagot		Managed to make it crash more times than anyone else.
+<tsb@earth.li>		Forced the ability to change the keys easily due to an
+			extremely odd keyboard layout.
+
+Lynx			The autoconf from Lynx provided much help in trying
+			to sort out ncurses etc issues.
+
+Eric Nadeau		Provided UI changes and vi style keys.
+<nado@ottawa.com>

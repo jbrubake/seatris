@@ -1,0 +1,15 @@
+* Specify preferred x:y ratio in config file.
+
+* Call for network version - not sure about this.
+
+* Colour configuration
+
+* Do automatic resize when screen size changes.
+
+* Remove increase level key? Limit to not increasing beyond a certain level?
+
+* Make .deb
+
+* Make the left hand wall code nicer.
+
+* 'Ghosting' of pieces (suggestion from Eric Nadeau)

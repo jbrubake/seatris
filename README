@@ -1,0 +1,119 @@
+seatris Version 0.0.14. 
+Copyright 1999 Jonathan McDowell for Project Purple.
+http://www.earth.li/projectpurple/progs/seatris.html
+
+
+Introduction:
+
+seatris is a tetris clone. Simple as that. Written as it's one of my
+favourite games and I've been meaning to write it for ten years now.
+Slightly helped by the fact that the previous Linux Tetris game I'd been
+playing (tt) didn't compile under glibc.
+
+
+Playing:
+
+Keys are:
+j,l     : left, right
+k       : rotate
+<space> : drop
+m	: drop by one line
++	: increase level
+p       : pause
+q	: quit
+Ctrl-L	: refresh screen
+
+
+Running:
+
+seatris can be given several command line options:
+
+-s            : Print out the high score table.
+-l x          : Start at level x. (max 20)
+-k "abcdefgh" : Use key a as left
+                        b as right
+                        c as rotate
+                        d as drop
+                        e as drop by one line
+                        f as increase level
+                        g as pause
+                        h as quit.
+                Default is "jlk m+pq"
+-f <filename> : Use <filename> as an alternative high score file. Does
+                not work if seatris is SUID or SGID.
+-b            : Force seatris not to use colour, even if ncurses reports
+                that the display is capable of it.
+-c            : Force seatris to use colour, even if ncurses reports that
+                the display isn't capable of it. May not work.
+
+
+Config file:
+
+Several options can also be set via either a global config file
+(/etc/seatrisrc by default) or a per user config file (~/.seatrisrc).
+They are all overridden by the command line options. The options are:
+
+KEYS abcdefgh
+	The same as the -k command line option.
+
+LEVEL <level>
+	The default start level.
+
+MONO <true|false>
+	Force the use of no colour, as with the -b command line switch.
+
+SCOREFILE <filename>
+	The full pathname to the desired highscore file to be used. Note
+	this cannot be used from the per user config file if seatris is
+	SUID or SGID.
+
+DOTS <true|false>
+	Enable the use of dots to help guide the position of pieces in
+	the playing grid.
+
+SQUIGGLES <true|false>
+	Enable the '$' characters at the bottom of the playing field to
+	help guide pieces.
+
+BOLD <true|false>
+	Enable the use of bold colours instead of darker ones.
+
+
+Platforms:
+
+seatris should be fairly portable - certainly the aim is to make it so.
+Unfortunately I only have a limited range of systems to try it on and
+so I can only say that I've tried it successfully on Linux, FreeBSD and
+HP/UX.
+
+
+Name:
+
+Why is it called seatris? Well, you see, I went to a careers fairs and
+Seagate were there. And they gave me a funny executive toy sort of
+thing, that just happens to only fit together with both sides covered
+when it's the in the shape of a tetris block. So it's the tetris shape
+maker and I renamed tetris to seatris as it's as good (or bad) a name as
+any. Note this does not imply any affiliation or support of Seagate,
+other than the fact they give away cool tetris shape makers if you ask
+nicely.
+
+
+Notes:
+Ideally seatris should be installed SGID games so that the high score
+file can be accessed for all users. Please note that this is a slight
+security risk.
+
+
+Contacting the author:
+
+I can be reached as noodles@earth.li or on Fidonet as Jonathan McDowell
+@ 2:443/21
+
+All constructive criticism about seatris is welcome.
+
+
+License:
+
+seatris is distributed under the GNU Public License, a copy of which
+should have been provided with this archive as LICENSE.
